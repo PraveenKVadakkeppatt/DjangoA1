@@ -7,6 +7,7 @@ from django.urls import path
 
 urlpatterns = [
     path('',views.addEmployee,name='addEmployee'),
+    path('index',views.index,name='index'),
     path('add_employee_details',views.add_employee_details,name='add_employee_details'),
     path('show_employees',views.show_employees,name='show_employees'),
 

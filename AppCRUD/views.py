@@ -9,6 +9,9 @@ from AppCRUD.models import EmployeeDetails
 def addEmployee(request):
     return render(request,'addEmployee.html')
 
+def index(request):
+    return render(request,'index.html')
+
 def add_employee_details(request):
     if request.method=='POST':
         eid=request.POST['employee_id']
