@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>
+        Show Employees Details
+    </h1>
+    <table border="2px">
+        <thead>
+        <tbody>
+
+            <tr>
+                <th>EMPLOYEE ID</th>
+                <th>EMPLOYEE NAME</th>
+                <th>EMPLOYEE DEPARTMENT</th>
+                <th>EMPLOYEE AGE</th>
+                <th>EMPLOYEE EMAIL ID</th>
+                <th>EMPLOYEE CONTACT</th>
+            </tr>
+        </thead>
+        {% for p in employee %}
+        <tr>
+            <td>{{ p.employee_id}}</td>
+            <td>{{ p.employee_name}}</td>
+            <td>{{ p.employee_department}}</td>
+            <td>{{ p.employee_age}}</td>
+            <td>{{ p.employee_email}}</td>
+            <td>{{ p.employee_contact}}</td>
+
+            <td><a href="{% url 'editpage' p.employee_id %}">Edit</a>
+                <br>
+                <a href="{% url 'deletepage' p.employee_id  %}">Delete</a>
+            </td>
+
+
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+</center>
+</body>
+</html>

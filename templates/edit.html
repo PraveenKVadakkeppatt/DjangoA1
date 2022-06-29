@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>
+         Add Employees...
+     </h1>
+     <form method="post" action="/edit_employee_details/{{ employee.id }}">
+         {% csrf_token %}
+
+        <label>Employee ID:</label>
+        <input type="number" name="employee_id" value="{{ employee.employee_id }}"><br><br>
+
+        <label>Employee Name:</label>
+        <input type="text" name="employee_name" value="{{ employee.employee_name }}"><br><br>
+
+        <label>Employee Department:</label>
+        <input type="text" name="employee_department" value="{{ employee.employee_department }}"><br><br>
+
+        <label>Employee Age:</label>
+        <input type="text" name="employee_age" value="{{ employee.employee_age }}"><br><br>
+
+        <label>Employee Email ID:</label>
+        <input type="text" name="employee_email" value="{{ employee.employee_email }}"><br><br>
+
+        <label>Employee Contact:</label>
+        <input type="text" name="employee_contact" value="{{ employee.employee_contact }}"><br><br>
+
+        <button type="submit">Update</button>
+
+        <input type=button value="Previous Page" onclick="javascript:history.go(-1);">
+        
+
+     </form>
+</body>
+</html>
